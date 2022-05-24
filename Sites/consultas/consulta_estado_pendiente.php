@@ -13,7 +13,7 @@
         $result = $db -> prepare($query);
         $result -> execute();
         $vuelos = $result -> fetchAll();
-
+        print_r($vuelos);
     ?>
 <table>
     <tr>
