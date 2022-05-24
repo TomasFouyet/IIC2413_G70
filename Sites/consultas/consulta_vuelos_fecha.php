@@ -28,7 +28,7 @@ $viajes = $result -> fetchAll();
     </thead>
     <?php
     foreach ($viajes as $viaje){
-        echo "<tr><td>$viaje[0]</td><td>$viaje[1]</td></tr>";
+        echo "<tr><th scope="row">$viaje[0]</th><th scope="row">$viaje[1]</th></tr>";
     }
     ?>
 </table>
