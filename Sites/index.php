@@ -23,11 +23,21 @@
     <input type="submit" value="Buscar">
   </form>
   <br>
-  <h2 align="center"> Pilotos con licencia vigente segun:</br>
+  <h2 align="center"> Pilotos con licencia vigente segun:</h2>
   <form align="center" action="consultas/consulta_piloto.php" method="post">
     Ingrese la fecha que desea analizar:
     <input type="date" name="fecha">
     <br/>
+    <input type="submit" value="Buscar">
+    <br/><br/>
+  </form>
+  <h2 align="center"> Buscar Vuelo por fechas:</h2>
+  <form align="center" action="consultas/consulta_vuelos_fecha.php" method="post">
+    Ingrese las fechas:
+    <input type="date" name="fecha1">
+    <br/>
+    <input type="date" name="fecha2">
+    <br>
     <input type="submit" value="Buscar">
     <br/><br/>
   </form>
