@@ -8,7 +8,7 @@
   <br>
   <h2 align="center"> Vuelos Con estado pendiente
   <form align="center" action="consultas/consulta_estado_pendiente.php" method="post">
-    <input type="submit" value="Buscar">
+    <input button class="button is-link" type="submit" value="Ver">
   </form><h2>
 
   <h2 align="center"> ¿Quieres buscar un vuelo en particular?</h2>
@@ -20,7 +20,7 @@
     Destino:
     <input type="text" name="destino">
     <br/><br/>
-    <input type="submit" value="Buscar">
+    <input button class="button is-link" type="submit" value="Buscar">
   </form>
   <br>
   <h2 align="center"> Pilotos con licencia vigente segun:</h2>
@@ -28,19 +28,21 @@
     Ingrese la fecha que desea analizar:
     <input type="date" name="fecha">
     <br/>
-    <input type="submit" value="Buscar">
+    <input button class="button is-link" type="submit" value="Buscar">
     <br/><br/>
   </form>
   <h2 align="center"> Buscar Vuelo por fechas:</h2>
   <form align="center" action="consultas/consulta_vuelos_fecha.php" method="post">
     Ingrese las fechas:
-    <input type="date" name="fecha1">
-    <br/>
-    <input type="date" name="fecha2">
+    <input type="date" name="fecha1"> a <input type="date" name="fecha2">
     <br>
-    <input type="submit" value="Buscar">
+    <input button class="button is-link" type="submit" value="Buscar">
     <br/><br/>
   </form>
-  
+  <h2 align="center"> Combinaciones de pilotos-copilotos que nunca han viajado juntos
+  <form align="center" action="consultas/consulta_piloto_copiloto.php" method="post">
+    <input button class="button is-link" type="submit" value="Ver">
+  </form><h2>
+
 </body>
 </html>

@@ -19,7 +19,7 @@ $result -> execute();
 $viajes = $result -> fetchAll();
 ?>
 
-<table>
+<table class="table">
     <tr>
         <th>Aeronave</th>
         <th>Numero de Viajes</th>

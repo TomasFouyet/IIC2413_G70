@@ -14,7 +14,7 @@ $result = $db -> prepare($query);
 $result -> execute();
 $vuelos = $result -> fetchAll();
 ?>
-<table class="table">
+<table>
     <tr>
         <th>Id de la propuesta</th>
         <th>Compania</th>
