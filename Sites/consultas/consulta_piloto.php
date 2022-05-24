@@ -5,7 +5,6 @@
 <?php
 require("../config/conexion.php");
 $fecha = $_POST["fecha"];
-print_r($fecha);
 $query = "SELECT C.certificado_id,C.fecha_habilitacion,C.fecha_termino,P.categoria,P.pasaporte
           FROM certificados as C
           JOIN pilotos as P
@@ -14,7 +13,6 @@ $query = "SELECT C.certificado_id,C.fecha_habilitacion,C.fecha_termino,P.categor
 $result = $db -> prepare($query);
 $result -> execute();
 $certificados = $result -> fetchAll();
-print_r($certificados);
 ?>
 <table>
     <tr>
@@ -25,6 +23,9 @@ print_r($certificados);
         <th>Pasaporte</th>
     </tr>
     <?php
+    foreach($certificados as $certificado){
+        echo "<tr><td>$certificado[0]</td><td>$certificado[1]</td><td>$certificado[2]</td><td>$certificado[3]</td><td>$certificado[4]</td></tr>";
+    }
     ?>
 </table>
 
