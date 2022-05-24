@@ -8,18 +8,19 @@
   $salida = $_POST["destino"]
   $llegada = $_POST["origen"]
   $query = "SELECT DISTINCT codigos.codigo_icao,c2.codigo_icao,propuesta_de_vuelo.propuesta_vuelo_id,aerodromos.nombre,a2.nombre
-  FROM codigos1 as codigos, aerodromos, tipo vuelo, propuesta de vuelo, aerodromos as a2, codigos1 as c2
-  WHERE codigo.nombre = aerodromos.nombre
-  and codigo.codigo icao LIKE '%$salida%'
-  and tipo vuelo.aerodromos salida id = aerodromo.aerodromo id
-  and propuesta de vuelo.id extra = tipo vuelo.id extra
-  and tipo vuelo.estado = 'aceptado'
-  and a2.aerodromo id = tipo vuelo.aerodromo llegada id
-  and c2.nombre = a2.nombre
-  and c2.codigo icao LIKE '%$llegada%';";
+            FROM codigos1 AS codigos, aerodromos, tipo vuelo, propuesta de vuelo, aerodromos AS a2, codigos1 AS
+            WHERE codigo.nombre = aerodromos.nombre
+            AND codigo.codigo icao LIKE '%$salida%'
+            AND tipo vuelo.aerodromos salida id = aerodromo.aerodromo id
+            AND propuesta de vuelo.id extra = tipo vuelo.id extra
+            AND tipo vuelo.estado = 'aceptado'
+            AND a2.aerodromo id = tipo vuelo.aerodromo llegada id
+            AND c2.nombre = a2.nombre
+            AND c2.codigo icao LIKE '%$llegada%';";
   $result = $db -> prepare($query);
   $result -> execute();
   $viajes = $result -> fetchAll();
+  print_r($viajes)
   ?>
 
   <table>
