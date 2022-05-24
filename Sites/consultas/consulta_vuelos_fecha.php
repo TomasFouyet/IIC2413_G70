@@ -20,10 +20,12 @@ $viajes = $result -> fetchAll();
 ?>
 
 <table align='center' class="table is-striped">
-    <tr>
-        <th>Aeronave</th>
-        <th>Numero de Viajes</th>
-    </tr>
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Aeronave</th>
+            <th scope="col">Numero de Viajes</th>
+        </tr>
+    </thead>
     <?php
     foreach ($viajes as $viaje){
         echo "<tr><td>$viaje[0]</td><td>$viaje[1]</td></tr>";
