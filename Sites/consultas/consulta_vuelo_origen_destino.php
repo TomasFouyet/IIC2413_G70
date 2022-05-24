@@ -6,12 +6,6 @@
   <?php
   require("../config/conexion.php"); #Llama a conexión, crea el objeto PDO y obtiene la variable $db
 
-  $origen = $_POST["origen"];
-  $destino = $_POST["destino"];
-  $query = "SELECT * FROM pokemones WHERE tipo='$var';";
-  $result = $db -> prepare($query);
-  $result -> execute();
-  $dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
   ?>
 
   <table>

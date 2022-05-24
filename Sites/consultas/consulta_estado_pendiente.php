@@ -3,18 +3,17 @@
 <body>
 
 <?php
-        require("../config/conexion.php");
+require("../config/conexion.php");
 
-        $query = "SELECT *
-                  FROM propuesta_de_vuelo as PV
-                  JOIN tipo_vuelo as TV
-                  ON PV.id_extra = TV.id_extra 
-                  WHERE TV.esatdo = 'pendiente';";
-        $result = $db -> prepare($query);
-        $result -> execute();
-        $vuelos = $result -> fetchAll();
-        print_r($vuelos);
-    ?>
+$query = "SELECT *
+          FROM propuesta_de_vuelo as PV
+          JOIN tipo_vuelo as TV
+          ON PV.id_extra = TV.id_extra;";
+$result = $db -> prepare($query);
+$result -> execute();
+$vuelos = $result -> fetchAll();
+print_r($vuelos);
+?>
 <table>
     <tr>
         <th>Id de la propuesta</th>
