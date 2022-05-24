@@ -14,17 +14,18 @@ $query = "SELECT *
 $result = $db -> prepare($query);
 $result -> execute();
 $certificados = $result -> fetchAll();
+print_r($certificados);
 ?>
 <table>
     <tr>
-        <th>Id de la propuesta</th>
-        <th>Compania</th>
-        <th>Fecha Enviholao Propuesta</th>
-        <th>Estado</th>
-        <th>Fecha Salida</th>
-        <th>Fecha Llegada</th>
-        <th>aerodromo salida</th>
-        <th>aerodromo llegada</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
     </tr>
     <?php
     ?>
