@@ -15,7 +15,7 @@ $result -> execute();
 $viajes = $result -> fetchAll();
 ?>
 
-<table>
+<table align='center' class="table is-striped">
     <tr>
         <th>Salida</th>
         <th>LLegada</th>

@@ -19,7 +19,7 @@ $result -> execute();
 $viajes = $result -> fetchAll();
 ?>
 
-<table class="table">
+<table align='center' class="table is-striped">
     <tr>
         <th>Aeronave</th>
         <th>Numero de Viajes</th>

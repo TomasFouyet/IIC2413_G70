@@ -9,12 +9,12 @@ $query = "SELECT C.certificado_id,C.fecha_habilitacion,C.fecha_termino,P.categor
           FROM certificados as C
           JOIN pilotos as P
           ON P.certificado_id = C.certificado_id
-          WHERE c.fecha_termino < '$fecha';";
+          WHERE c.fecha_termino <= '$fecha';";
 $result = $db -> prepare($query);
 $result -> execute();
 $certificados = $result -> fetchAll();
 ?>
-<table>
+<table align='center' class="table is-striped">
     <tr>
         <th>Certificado Id</th>
         <th>Fecha Habilitacion</th>
