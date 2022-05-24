@@ -8,7 +8,7 @@ require("../config/conexion.php"); #Llama a conexión, crea el objeto PDO y obti
 $salida = $_POST["origen"];
 $llegada = $_POST["destino"];
 $query = "SELECT DISTINCT codigos.codigo_icao,c2.codigo_icao,propuesta_de_vuelo.propuesta_vuelo_id,aerodromos.nombre,a2.nombre
-          FROM codigos1 AS codigos, aerodromos, tipo vuelo, propuesta de vuelo, aerodromos AS a2, codigos1 AS
+          FROM codigos1 AS codigos, aerodromos, tipo_vuelo, propuesta_de_vuelo, aerodromos AS a2, codigos1 AS c2
           WHERE codigo.nombre = aerodromos.nombre AND codigo.codigo_icao LIKE '%$salida%' AND tipo_vuelo.aerodromos_salida_id = aerodromo.aerodromo_id AND propuesta_de_vuelo.id_extra = tipo_vuelo.id_extra AND tipo_vuelo.estado = 'aceptado' AND a2.aerodromo_id = tipo_vuelo.aerodromo_llegada_id AND c2.nombre = a2.nombre AND c2.codigo_icao LIKE '%$llegada%';";
 $result = $db -> prepare($query);
 $result -> execute();
