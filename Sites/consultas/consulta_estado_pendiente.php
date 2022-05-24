@@ -19,7 +19,7 @@ print_r($vuelos);
     <tr>
         <th>Id de la propuesta</th>
         <th>Compania</th>
-        <th>Fecha Envio Propuesta</th>
+        <th>Fecha Enviholao Propuesta</th>
         <th>Estado</th>
         <th>Fecha Salida</th>
         <th>Fecha Llegada</th>
