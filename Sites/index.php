@@ -23,12 +23,14 @@
     <input type="submit" value="Buscar">
   </form>
   <br>
-  <h2 align="center"> Pilotos con licencia vigente segun:
+  <h2 align="center"> Pilotos con licencia vigente segun:</br>
   <form align="center" action="consultas/consulta_piloto.php" method="post">
     Ingrese la fecha que desea analizar:
     <input type="date" name="fecha">
     <br/>
-  </form><h2>
+    <input type="submit" value="Buscar">
+    <br/><br/>
+  </form>
   
 </body>
 </html>
