@@ -8,7 +8,8 @@ require("../config/conexion.php");
 $query = "SELECT *
           FROM propuesta_de_vuelo as PV
           JOIN tipo_vuelo as TV
-          ON PV.id_extra = TV.id_extra;";
+          ON PV.id_extra = TV.id_extra 
+          WHERE TV.esatdo = 'pendiente';";
 $result = $db -> prepare($query);
 $result -> execute();
 $vuelos = $result -> fetchAll();
