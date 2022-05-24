@@ -5,7 +5,7 @@
 <?php
 require("../config/conexion.php");
 
-$query = "SELECT *
+$query = "SELECT propuesta_vuelo_id,codigo_compania,fecha_envio_propuesta,estado,fecha_salida,fecha_llegada,aerodromo_llegada_id,aerodromo_salida_id
           FROM propuesta_de_vuelo as PV
           JOIN tipo_vuelo as TV
           ON PV.id_extra = TV.id_extra 
@@ -13,7 +13,6 @@ $query = "SELECT *
 $result = $db -> prepare($query);
 $result -> execute();
 $vuelos = $result -> fetchAll();
-print_r($vuelos);
 ?>
 <table>
     <tr>
