@@ -3,18 +3,18 @@
 <body>
 
 <?php
-  require("../config/conexion.php");
+        require("../config/conexion.php");
 
-  $query = "SELECT propuesta_vuelo_id,codigo_compania,fecha_envio_propuesta,estado,fecha_salida,fecha_llegada,aerodromo_llegada_id,aerodromo_salida_id \
-            FROM propuesta_de_vuelo as PV
-            JOIN tipo_vuelo as TV
-            ON PV.id_extra = TV.id_extra 
-            WHERE TV.esatdo = 'pendiente';";
-  $result = $db -> prepare($query);
-  $result -> execute();
-  $vuelos = $result -> fetchAll();
+        $query = "SELECT propuesta_vuelo_id,codigo_compania,fecha_envio_propuesta,estado,fecha_salida,fecha_llegada,aerodromo_llegada_id,aerodromo_salida_id
+                  FROM propuesta_de_vuelo as PV
+                  JOIN tipo_vuelo as TV
+                  ON PV.id_extra = TV.id_extra 
+                  WHERE TV.esatdo = 'pendiente';";
+        $result = $db -> prepare($query);
+        $result -> execute();
+        $vuelos = $result -> fetchAll();
 
-?>
+    ?>
 <table>
     <tr>
         <th>Id de la propuesta</th>
@@ -33,4 +33,4 @@
     ?>
 </table>
 
-<?php include('../templates/footer.html');?>
+<?php include('../templates/footer.html'); ?>
