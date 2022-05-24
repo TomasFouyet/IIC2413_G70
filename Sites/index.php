@@ -11,7 +11,7 @@
     <input type="submit" value="Buscar">
   </form><h2>
 
-  <h3 align="center"> ¿Quieres buscar un vuelo en particular?</h3>
+  <h2 align="center"> ¿Quieres buscar un vuelo en particular?</h2>
 
   <form align="center" action="consultas/consulta_vuelo_origen_destino.php" method="post">
     Origen:
@@ -22,6 +22,13 @@
     <br/><br/>
     <input type="submit" value="Buscar">
   </form>
+  <br>
+  <h2 align="center"> Pilotos con licencia vigente segun:
+  <form align="center" action="consultas/consulta_piloto.php" method="post">
+    Ingrese la fecha que desea analizar:
+    <input type="date" name="fecha">
+    <br/>
+  </form><h2>
   
 </body>
 </html>
